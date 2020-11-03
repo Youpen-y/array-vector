@@ -89,4 +89,16 @@ int main()
     std::cout <<'\n';
 
 
+    std::vector<int>num{0,1,2,3,4,5,6,7,8,9};
+    std::vector<std::string>words{"the","frogurt","is","also","cursed"};
+    std::vector<std::string>words1(words.begin(),words.end());
+    std::vector<std::string>words2(words);
+    std::vector<std::string>words3(5,"Mo");
+    num.push_back(25);
+    for(auto n : num){
+        std::cout<<n<<'\n';
+    }
+    std::cout<<num.size();
+    std::cout<<"The first element: "<<num.front()<<" . The Last element: "<<num.back();
+
 }
