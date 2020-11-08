@@ -20,7 +20,7 @@ int main(){
         int n;
         cin>>n;
         int arr[n];
-        for(auto i:arr)
+        for(int i=0;i<n;i++)
             cin>>arr[i];
         cout<<kadane(arr,n)<<endl;
     }
