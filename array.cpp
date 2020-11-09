@@ -27,7 +27,9 @@ int main()
     }catch(std::out_of_range const& exc){
         std::cout<<exc.what()<<'\n';
     }
-
+    if(*numbers.begin() != numbers.front()){
+        throw std::out_of_range("That's right");
+    }
     //operator[]    operator[5] undefined behavior
     i = numbers[1];        //Read value
     numbers[0] = 55;        //Set value
@@ -81,7 +83,7 @@ int main()
               <<(numbers.cbegin() == numbers.cend())<<'\n'
               << "3)"
               << *(numbers.begin()) << ' '
-              << *(numbers.end()) << '\n';
+              << *(numbers.end()) << '\n';      //there, end iterator is undefined
         *numbers.begin() = 5;
     std::cout <<"4)" << *(numbers.begin()) << '\n';
     std::cout <<"5)";
@@ -98,7 +100,7 @@ int main()
     for(auto n : num){
         std::cout<<n<<'\n';
     }
-    std::cout<<num.size();
+    std::cout<<num.size()<<std::endl;
     std::cout<<"The first element: "<<num.front()<<" . The Last element: "<<num.back();
 
 }
