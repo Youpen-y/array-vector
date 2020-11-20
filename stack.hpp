@@ -11,9 +11,8 @@ class Stack{
         std::vector<T> elems;   //store elements in vector container.
 
     public:
-        Stack(){
-            elems=0;
-        }          //default constructor
+        Stack();       //default constructor
+        
         void push(T const&);       //push a element into stack
         void pop();                 //pop a element out of stack
         T top() const;          //return top element of stack
