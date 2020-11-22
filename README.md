@@ -1,1 +1,1 @@
-## This is some try using C++.
+## There are some codes using C++.
