@@ -63,6 +63,8 @@ int main(){
     }
     cout<<"Input the k value: ";
     cin>>k;
-    cout<<"The "<<k<<"th smallest value is: "<<Find_kth_min(list,N,k)<<endl;
+    int kth_min = Find_kth_min(list,N,k);
+    cout<<"The "<<k<<"th smallest value is: "<<kth_min<<endl;
+    cout<<"Location: "<<Findindex(list,kth_min,N)+1<<endl;
     return 0;
 }
